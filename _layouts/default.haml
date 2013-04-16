@@ -1,0 +1,34 @@
+!!! 5
+%html
+  %head
+    %title Paperplane.io - Blog
+    %link(rel="stylesheet" href="/css/style.css" type="text/css")
+    %link(rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml")
+    %script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+    %meta{ 'name' => 'viewport', 'content' => 'width=device-width', 'initial-scale' => '1' }
+  %body
+    
+    %header
+      %h1
+        %a.brand(href="/")
+          %img(src="//www.paperplane.io/images/logo.sm.png")
+          paperplane.io <i class="icon-caret-right"></i> blog
+      %nav
+        %a(href="//www.paperplane.io/") home
+        %a(href="/archive.html") archive
+        %a(href="/rss.xml") rss
+        %a(href="http://twitter.com/paperplaneio") <i class="icon-twitter"></i> follow us on twitter
+
+    #content
+      {{ content }}
+
+    %footer
+      %p &copy; Paperplane.io
+
+      %nav
+        %a(href="//www.paperplane.io/") about paperplane.io
+        %a(href="//www.paperplane.io/tos") Terms of Service
+        %a(href="//www.paperplane.io/privacy") Privacy Policy
+      %nav
+        %a(href="http://twitter.com/paperplaneio") <i class="icon-twitter"></i>
+        %a(href="/rss.xml") <i class="icon-rss"></i>

@@ -1,0 +1,5 @@
+paginate: 5 # the number of post per page
+
+sass:
+  syntax: sass        # scss|sass
+  style:  compressed  # nested|expanded|compact|compressed
