@@ -33,7 +33,7 @@ First, let's go ahead and fill out the new site form:
 
 Now it says there should be a new folder in Dropbox at Dropbox > Apps > paperplane.io > www.equitysteaks.com. And sure enough:
 
-![](/images/2013-04-16-setting-up-a-custom-domain-on-paperplane/04_after_site_create.png)
+![](/images/2013-04-16-setting-up-a-custom-domain-on-paperplane/04_dropbox_folder.png)
 
 There it is.
 
