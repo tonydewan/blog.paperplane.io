@@ -1,3 +1,8 @@
+---
+author: Kyle Shipley
+layout: post
+---
+
 We recently launched [paperplane.io](http://www.paperplane.io), a service that makes hosting web sites super easy. We've been using it a lot for quick experiments like [manasword.paperplane.io](http://manasword.paperplane.io/), wherein I attempted to convince a friend to replay SNES Action-RPG classic Secret of Mana and played with CSS3 border-images. It's also our go-to tool for landing pages, including [the re:build conference](http://www.rebuildconf.com/) and [Equity Steaks](http://www.equitysteaks.com).
 
 You'll notice that those last two pages are on custom domains. Luckily, paperplane has a fairly painless process for connecting that great new domain you purchased to a Dropbox folder. It's a few more steps than using a paperplane.io subdomain, but with the right hosting partner, it can be pretty painless. If you haven't signed up for [paperplane.io](http://paperplane.io) yet, now would be a good time to familiarize yourself. We'll wait for you.
