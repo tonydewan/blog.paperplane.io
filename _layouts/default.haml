@@ -6,6 +6,11 @@
     %link(rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml")
     %script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js")
     %meta{ 'name' => 'viewport', 'content' => 'width=device-width', 'initial-scale' => '1' }
+    {% if page.description %}
+    %meta{ name: 'description', content: "{{page.description}}"}
+    {% else %}
+    %meta{ name: 'description', content: "Paperplane.io turns dropbox folders or GitHub repos into websites. On our blog we answer questions, show off cool projects, and advocate static web sites." }
+    {% endif %}
   %body
     
     %header
