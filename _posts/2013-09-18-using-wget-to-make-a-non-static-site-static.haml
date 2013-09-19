@@ -1,0 +1,66 @@
+---
+author: Tony Dewan
+layout: post
+title: Using wget to make a any site into a static site
+description: Have an old wordpress or php site you want to host on paperplane? Here's how!
+---
+
+%p I want to make something clear: Paperplane.io doesn't support any kind of server-side scripting language like <code>PHP</code>. But that's on purpose! We believe that many sites don't need that level of sophistication, especially if you speak <code>HTML</code> and <code>CSS</code>.
+
+%p Lots of sites are built on tools like WordPress, though, and it can be a daunting task to convert a site from WordPress to static HTML and CSS. We certainly wouldn't want to tackle it. Luckily, there's an easy way to backup any public website with a quick command, called <code>wget</code>. Here's how.
+
+%p The only caveat: you'll need to use the command line. If you're scared of that, don't be! We'll make it easy. (Also, these commands are for Mac OSX. If you're on Windows, some things will be different. Let us know if you need help!)
+
+%p First step, start the Terminal:
+
+.full-width
+  %img(src='/images/2013-09-18-using-wget-to-make-a-non-static-site-static/terminal.png')
+
+%p.note If this is new: the Terminal is the command-line interface to your Mac. <a href="http://en.wikipedia.org/wiki/Terminal_(OS_X)">More info here</a>.
+
+%p You should see something that looks like this:
+
+.full-width
+  %img(src='/images/2013-09-18-using-wget-to-make-a-non-static-site-static/prompt.png')
+
+%p Type or copy the following command into the terminal, <strong>making sure to replace YOURURL.com with the website you want to backup.</strong>
+
+%p
+  %pre
+    %code wget -p -P ~/Desktop/websitebackup --convert-links -m -nH http://YOURURL.com/
+
+%p It will look something like this:
+
+.full-width
+  %img(src='/images/2013-09-18-using-wget-to-make-a-non-static-site-static/prompt2.png')
+
+%p This will backup the site to a folder on your desktop called <code>websitebackup</code>.
+
+%p Let me a explain a little bit about what's going on here. We're using a standard tool called <code>wget</code>. You can see that at the beginning of the line. We're then passing several flags (or options) to make sure it does exactly what we want it to do. Here's a few of the options we've set and what they mean:
+
+%dl
+  %dt <code>-p</code>
+  %dd Tells wget to get all the necessary files to display the page (images, CSS, etc)
+
+  %dt <code>-P ~/Desktop/websitebackup</code>
+  %dd Sets the path on your local machine for the output (the new static version of your site)
+
+  %dt <code>--convert-links</code>
+  %dd After the download is complete, convert the links in the document to make them suitable for local viewing
+
+  %dt <code>-m</code>
+  %dd Turn on options suitable for mirroring. This option turns on recursion and time-stamping, sets infinite recursion depth and keeps ftp directory listings.
+
+  %dt <code>http://YOURURL.com/</code>
+  %dd The final parameter tells wget which url to get.
+
+%p.note You can read all about the different options for wget at <a href="http://en.wikipedia.org/wiki/Wget">Wikipedia</a> or <a href="http://www.gnu.org/software/wget/manual/wget.html">gnu.org</a>.
+
+%p Now, if you want o backup to directly to your paperplane account, it's as simple as changing the path (-P) option. If, for example, your site has this url <code>blogbackup.paperplane.io</code>, just use this command:
+
+%p
+  %pre
+    %code wget -p -P ~/Dropbox/Apps/paperplane.io/blogbackup.paperplane.io \
+    %code --convert-links -m -nH http://YOURURL.com/
+
+%p This works well for converting sites for archival purposes, but what if you want to make sonething more editable? Jekyll is a fantastic tool for static blogging (we use it for this blog!) We'll write an in depth post about it soon!
