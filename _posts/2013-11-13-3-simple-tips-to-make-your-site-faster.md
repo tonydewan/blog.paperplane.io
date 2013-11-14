@@ -1,8 +1,12 @@
 ---
 author: Kyle Shipley
 layout: post
-title: 3 Simple Tips to Make Your Site Load Faster
+title: 3 Simple Tips to Make Your Site Faster
 ---
+
+<div class="full-width">
+  <img src="/images/2013-11-13-3-simple-tips-to-make-your-site-faster/network_tab.png" alt="Network tab"/>
+</div>
 
 You may have noticed the changes we made to Paperplane last week that have significantly improved performance. There were a lot of sites that were taking 2-3 seconds to load that are now under 200 milliseconds. (10x improvement!) Even with these changes, you might notice that the HTML loads quickly, but images slowly paint in or CSS styles don't take effect immediately.
 
@@ -18,6 +22,10 @@ Let's say you upload a 1MB image file at a 1920x1080 resolution. If you're only 
 
 ### 2. Optimize your images
 
+<center>
+  <img src="/images/2013-11-13-3-simple-tips-to-make-your-site-faster/image_optim.png" alt="ImageOptim"/>
+</center>
+
 If you're a photographer, you probably know that images taken with a digital camera have lots of "metadata" (that's data about data) in them. These bits of metadata tell you things like who took the picture, where it was taken, what camera settings were used, and so on. These are great if you're uploading a photo to Flickr or Picasa, but not so great for most web sites. Does your visitor really care what photo settings were used to make your splash image, or do they just want to see your blog or your product?
 
 Luckily, there are some simple tools you can use to shrink your image sizes even further before you upload them to Paperplane. On Mac, I use [ImageOptim](http://imageoptim.com/), which is a simple drag-and-drop compressor and metadata remover. It's almost impossible to explain how simple it is, so just download it and try it out! (Warning: ImageOptim modifies your images in-place, so you might want to make a copy before you use it.)
@@ -27,6 +35,10 @@ I haven't used an image optimizer on Windows, but there's some recommendations [
 **Tip**: Use an image optimizer like [ImageOptim](http://imageoptim.com/) to compress images and remove metadata before uploading your images.
 
 ### 3. Move JavaScript tags to the bottom of the page
+
+<center>
+  <img src="/images/2013-11-13-3-simple-tips-to-make-your-site-faster/javascript_footer.png" alt="JavaScript in the footer"/>
+</center>
 
 Browsers have a limit on the number of assets (CSS, JavaScript, images, etc.) they can download from one host at a given time. Although I couldn't find a canonical source, it looks like [this number is 6](http://stackoverflow.com/questions/985431/max-parallel-http-connections-in-a-browser) for most modern browsers. If you're loading a lot of JavaScript files, especially big ones, they might prevent images or CSS styles from loading. Your visitors probably need a moment to read your page and understand what they're looking at, so the interactive bits of your website can probably wait a few milliseconds.
 
